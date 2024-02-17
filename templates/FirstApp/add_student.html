@@ -1,0 +1,19 @@
+{% extends "FirstApp/layout.html" %}
+
+{% block title %}
+    <title>Add Student</title>
+{% endblock %}
+
+{% block content %}
+    <br>
+    <div style="border: 1px solid; width: 25%;margin-left: 40%;">
+        <form method="post" style="padding: 5%;">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Add Students" class="btn btn-success">
+        </form>
+    </div>
+
+    <br>
+    <a href="/students/show/"><button class="btn btn-primary" style="margin-left: 48%;">Show Students</button></a>
+{% endblock %}

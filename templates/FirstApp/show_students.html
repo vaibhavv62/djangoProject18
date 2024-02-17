@@ -1,0 +1,30 @@
+{% extends "FirstApp/layout.html" %}
+
+{% block title %}
+    <title>Show Students</title>
+{% endblock %}
+
+{% block content %}
+    <table class="table table-dark" style="width: 70%; margin-left: 15%;">
+        <tr>
+            <th>ID</th>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        {% for stu in all_students %}
+            <tr>
+                <td>{{ stu.id }}</td>
+                <td>{{ stu.rn }}</td>
+                <td>{{ stu.name }}</td>
+                <td>{{ stu.marks }}</td>
+                <td><a href="/students/update/{{ stu.id }}"><button class="btn btn-warning">Update</button></a></td>
+                <td><a href="/students/delete/{{ stu.id }}"><button class="btn btn-danger">Delete</button></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/students/add/"><button class="btn btn-primary" style="margin-left: 45%;">Add Student</button></a>
+{% endblock %}
