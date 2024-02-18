@@ -20,11 +20,11 @@
                 <td>{{ stu.rn }}</td>
                 <td>{{ stu.name }}</td>
                 <td>{{ stu.marks }}</td>
-                <td><a href="/students/update/{{ stu.id }}"><button class="btn btn-warning">Update</button></a></td>
-                <td><a href="/students/delete/{{ stu.id }}"><button class="btn btn-danger">Delete</button></a></td>
+                <td><a href="/update/{{ stu.id }}"><button class="btn btn-warning">Update</button></a></td>
+                <td><a href="/delete/{{ stu.id }}"><button class="btn btn-danger">Delete</button></a></td>
             </tr>
         {% endfor %}
     </table>
     <br>
-    <a href="/students/add/"><button class="btn btn-primary" style="margin-left: 45%;">Add Student</button></a>
+    <a href="/add/"><button class="btn btn-primary" style="margin-left: 45%;">Add Student</button></a>
 {% endblock %}
