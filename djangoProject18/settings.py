@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "FirstApp"
 ]
 
+CSRF_TRUSTED_ORIGINS = ["https://djangoproject18.azurewebsites.net"]
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
