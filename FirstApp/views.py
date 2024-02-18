@@ -17,7 +17,7 @@ def add_student_view(request):
         form = StudentModelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("/students/show/")
+            return redirect("")
     template_name = "FirstApp/add_student.html"
     context = {"form":form}
     return render(request, template_name, context)
@@ -29,7 +29,7 @@ def update_student_view(request,i):
         form = StudentModelForm(request.POST,instance=student)
         if form.is_valid():
             form.save()
-            return redirect("/students/show/")
+            return redirect("")
     template_name = "FirstApp/add_student.html"
     context = {"form":form}
     return render(request, template_name, context)
@@ -37,7 +37,7 @@ def update_student_view(request,i):
 def delete_student_view(request,i):
     student = Student.objects.get(id=i)
     student.delete()
-    return redirect("/students/show/")
+    return redirect("")
 
 
 
